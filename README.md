@@ -1,56 +1,30 @@
-https://v2.tailwindcss.com/docs/guides/vue-3-vite
+# Görev Planlayıcı Uygulaması
 
-Kodunu kullanarak tailwindi indirdik
+## Proje Açıklaması
 
-    npx tailwindcss init -p
+Bu proje, günlük hayattaki görevleri kategorilere ayırarak takip etmeyi sağlayan Ionic tabanlı bir mobil uygulamadır. Firebase ile entegre çalışarak kullanıcının görevlerini bulut üzerinde saklar ve organize eder.
 
-tailwind css yi kullanmak için ilk başta main.ts ye girip import etmek lazım.
+## Temel Özellikler
 
-    import './assets/tailwind.css';
+- **Kategorilere Göre Görev Düzenleme**: Kullanıcılar görevlerini iş, müzik, yolculuk, ders, spor ve alışveriş gibi kategorilere ayırabilir.
 
----
-iconlar için
+- **Dinamik Görev Ekleme**: Sağ alt köşedeki artı butonuna tıklanarak açılan form ile yeni görevler eklenebilir. Form, başlık, açıklama, tarih ve kategori alanlarını içerir.
 
-    npm i ionicons
+- **Firebase Entegrasyonu**: Eklenen tüm görevler Firebase veritabanına kaydedilir, böylece veriler güvenle saklanır ve cihazlar arasında senkronize edilebilir.
 
----
-sağ aşşağıya sabit buton için ion-fab kullanıyoruz
+- **Zaman Bazlı Organizasyon**: Görevler, bugünün tarihine göre otomatik olarak şu sekmelere yerleştirilir:
+    - Gelen Yapılacaklar
+    - Bugün Yapılacaklar
+    - Yapılanlar
+    - Geçen Yapılacaklar
 
-    //vertical ile aşşağıda yukarda olucasğını vertical ile sağda solda olucağını ayarladık
-    <ion-fab vertical="bottom" horizontal="end" >
-        <ion-fab-button>
-            <ion-icon :icon="add"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
+- **Sezgisel Etkileşim**: Görevleri sağa kaydırarak silme işlemi, sola kaydırarak ise tamamlama işlemi gerçekleştirilebilir. Tamamlanan görevler üstü çizili olarak gösterilir.
 
----
-Tıklayınca modal açılması için 
+## Teknik Altyapı
 
-    <div>
-        <ion-fab vertical="bottom" horizontal="end" >
-            <ion-fab-button @click="modalController=true">
-                <ion-icon :icon="add"></ion-icon>
-            </ion-fab-button>
-        </ion-fab>
-        <ion-modal :is-open="modalController" :backdrop-dismiss="false">
-            <h1 class="text-2xl">Modal</h1>
-        </ion-modal>
-    </div>
+- **Frontend**: Ionic Framework ve Angular
+- **Backend**: Firebase Realtime Database
+- **Kimlik Doğrulama**: Firebase Authentication
+- **Depolama**: Cloud Firestore
 
-    import {defineComponent,ref} from 'vue'
-    setup() {
-        const modalController = ref(false);
-        return {clipboard,briefcase,headset,airplane,book,footballSharp,cardOutline,add,modalController}
-    }
-
----
-VeeValidate
-
-veeValidate, Vue.js uygulamalarında form validasyonu (doğrulama) için kullanılan popüler bir kütüphanedir. 
-Formlarınızdaki alanları doğrulamak ve hata mesajları göstermek için kullanışlı özellikler sunar.
-
-    npm i vee-validate --save
-
-    //impotları
-    import {Form,Field,ErrorMessage} from 'vee-validate';
-# ionicTaskManager
+Bu uygulama, günlük görevlerin organize edilmesi ve takibi için pratik bir çözüm sunar. Kategori bazlı yaklaşımı ve sezgisel kullanıcı arayüzü sayesinde farklı yaşam alanlarındaki görevleri kolayca yönetmeyi mümkün kılar.
