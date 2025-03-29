@@ -1,0 +1,7 @@
+{
+  "name": "gorev-yonetici",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
