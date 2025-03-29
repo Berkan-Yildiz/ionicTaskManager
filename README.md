@@ -4,7 +4,7 @@ Bu proje, kullanıcıların günlük görevlerini kategori bazlı olarak yönete
 
 ## 📌 Özellikler
 - **Kategori Bazlı Yönetim**: Görevler **İş, Müzik, Yolculuk, Ders, Spor, Alışveriş** kategorilerine ayrılır.
-  ![Görev Planlayıcı Uygulaması](image/mainpage.png)
+  ![Görev Planlayıcı Uygulaması](images/mainPage.png)
 - **Görev Ekleme**: Kullanıcılar **Başlık, Açıklama, Tarih ve Kategori** seçerek görev ekleyebilir.
 - **Tarih Bazlı Filtreleme**:
     - **Gelen Yapılacaklar** (İleriki tarihli görevler)
