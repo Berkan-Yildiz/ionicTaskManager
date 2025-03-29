@@ -1,30 +1,28 @@
 # Görev Planlayıcı Uygulaması
 
-## Proje Açıklaması
+Bu proje, kullanıcıların günlük görevlerini kategori bazlı olarak yönetebileceği bir **görev planlayıcı** mobil uygulamasıdır. **Ionic Framework** kullanılarak geliştirilmiş olup, veriler **Firebase Database** üzerinde saklanmaktadır.
 
-Bu proje, günlük hayattaki görevleri kategorilere ayırarak takip etmeyi sağlayan Ionic tabanlı bir mobil uygulamadır. Firebase ile entegre çalışarak kullanıcının görevlerini bulut üzerinde saklar ve organize eder.
+## 📌 Özellikler
+- **Kategori Bazlı Yönetim**: Görevler **İş, Müzik, Yolculuk, Ders, Spor, Alışveriş** kategorilerine ayrılır.
+  ![Görev Planlayıcı Uygulaması](image/mainpage.png)
+- **Görev Ekleme**: Kullanıcılar **Başlık, Açıklama, Tarih ve Kategori** seçerek görev ekleyebilir.
+- **Tarih Bazlı Filtreleme**:
+    - **Gelen Yapılacaklar** (İleriki tarihli görevler)
+    - **Bugün Yapılacaklar** (Bugünkü görevler)
+    - **Yapılanlar** (Tamamlanmış görevler, üstü çizili gösterilir)
+    - **Geçen Yapılacaklar** (Süresi geçmiş ama tamamlanmamış görevler)
+- **Kaydırma Hareketleri**:
+    - **Sağa Kaydır** → Silme işlemi
+    - **Sola Kaydır** → Tamamlandı olarak işaretleme
 
-## Temel Özellikler
+## 🛠 Kullanılan Teknolojiler
+- **Ionic Framework** (Mobil UI)
+- **Firebase Database** (Gerçek zamanlı veri saklama)
+- **TypeScript & Vue** (Frontend geliştirme)
 
-- **Kategorilere Göre Görev Düzenleme**: Kullanıcılar görevlerini iş, müzik, yolculuk, ders, spor ve alışveriş gibi kategorilere ayırabilir.
+## 📷 Ekran Görüntüsü
+![Görev Planlayıcı Uygulaması](image/screenshot.png)
 
-- **Dinamik Görev Ekleme**: Sağ alt köşedeki artı butonuna tıklanarak açılan form ile yeni görevler eklenebilir. Form, başlık, açıklama, tarih ve kategori alanlarını içerir.
+---
+Bu proje, görev yönetimini kolaylaştıran kullanıcı dostu bir mobil uygulamadır. Katkılarınızı bekliyoruz! 🎯
 
-- **Firebase Entegrasyonu**: Eklenen tüm görevler Firebase veritabanına kaydedilir, böylece veriler güvenle saklanır ve cihazlar arasında senkronize edilebilir.
-
-- **Zaman Bazlı Organizasyon**: Görevler, bugünün tarihine göre otomatik olarak şu sekmelere yerleştirilir:
-    - Gelen Yapılacaklar
-    - Bugün Yapılacaklar
-    - Yapılanlar
-    - Geçen Yapılacaklar
-
-- **Sezgisel Etkileşim**: Görevleri sağa kaydırarak silme işlemi, sola kaydırarak ise tamamlama işlemi gerçekleştirilebilir. Tamamlanan görevler üstü çizili olarak gösterilir.
-
-## Teknik Altyapı
-
-- **Frontend**: Ionic Framework ve Angular
-- **Backend**: Firebase Realtime Database
-- **Kimlik Doğrulama**: Firebase Authentication
-- **Depolama**: Cloud Firestore
-
-Bu uygulama, günlük görevlerin organize edilmesi ve takibi için pratik bir çözüm sunar. Kategori bazlı yaklaşımı ve sezgisel kullanıcı arayüzü sayesinde farklı yaşam alanlarındaki görevleri kolayca yönetmeyi mümkün kılar.
